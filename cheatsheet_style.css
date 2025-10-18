@@ -1,0 +1,218 @@
+body {
+    background: #1c1c1c;
+    margin: 0;
+    width: auto;
+    align-items: center;
+    min-height: 100vh;
+}
+main {
+    width:auto;
+    box-sizing: border-box;
+    padding: 0px 16px; /* breathing room from top and sides */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+header {
+    background-image: url("../resources/html-codes-scaled.jpeg");
+    height: 180px;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 32px;
+}
+
+/* Darken header image with a colored overlay without affecting the H1 text */
+header {
+    position: relative; /* establish stacking context for pseudo-element */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center; /* vertical center */
+    justify-content: center; /* horizontal center */
+}
+
+:root {
+    --header-overlay-color: 0, 0, 0; /* RGB for overlay (black) */
+    --header-overlay-alpha: 0.60; /* opacity: 0 = transparent, 1 = opaque */
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    inset: 0; /* top:0; right:0; bottom:0; left:0 */
+    background-color: rgba(var(--header-overlay-color), var(--header-overlay-alpha));
+    pointer-events: none; /* allow clicks through overlay */
+    z-index: 1;
+}
+
+header h1 {
+    position: relative; /* place above overlay */
+    z-index: 2;
+    margin: 0;
+}
+h1 {
+    font-size: 48px;
+    color: white;
+    /* remove fixed height so text can center vertically */
+    height: auto;
+    text-align: center;
+    width: auto;
+}
+.tab-bar{
+    padding: 8px;
+    background-color: #151515;
+    max-width: 190px;
+    margin: auto;
+    text-align: center;
+    border-radius: 4px;
+}
+.btn-current, .btn-clickable {
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 16px;
+    display: inline;
+    width: 90px;
+    border-radius: 4px;;
+}
+.btn-current {
+    background-color: #151515;
+    color: white;
+    border: 0;
+}
+.btn-clickable {
+    background-color: #2a2a2a;
+    color: gray;
+    border: 1px solid gray;
+}
+.btn-clickable:hover {
+    background-color: #3a3a3a;
+    color: white;
+}
+
+/* Main information, tabs */
+.tab-pills{
+    box-sizing: border-box;
+    width: auto;
+    text-align: left;
+    border-bottom: 1px #464545  solid;
+    padding: 0%;
+    margin-bottom: 0;
+    margin: 24px auto 0;
+    max-width: 1200px;
+}
+.nav-item-active{
+    font-weight: 700;
+    color: white;
+    background-color: #57359e;
+    border-radius: 4px 4px 0px 0px;
+    padding: 16px 24px;
+    display: inline-block;
+    border: none;
+}
+
+/* Make the clickable area the anchor itself to avoid layout shifts
+   and keep visual styles consistent across tabs. */
+.tab-pills li {
+    margin: 0;
+    padding: 0; /* remove padding on li so anchors control size */
+}
+.tab-pills .nav-item-link {
+    display: inline-block;
+    padding: 16px 24px;
+    color: inherit;
+}
+.tab-pills .nav-item-link[aria-selected="true"],
+.tab-pills .nav-item.nav-item-active .nav-item-link {
+    font-weight: 700;
+    background-color: #57359e;
+    color: white;
+    border-radius: 4px 4px 0 0;
+}
+.tab-pills .nav-item-link:focus {
+    outline: 2px solid #fff;
+    outline-offset: 0px;
+}
+
+/* Hide panels by default, show when .active is set by JS */
+.tab-panel {
+    display: none;
+}
+.tab-panel.active {
+    display: block;
+}
+.nav-item{
+    color: white;
+    font-weight: 300;
+    font-size: 16px;
+    height: auto;
+    width: auto;
+    padding: 16px 24px;
+    display: inline-block;
+    border-radius: 4px 4px 0px 0px;
+}
+.nav-item:hover{
+    color: white;
+    background-color: #0b0b0b;
+    font-weight: 300;
+    font-size: 16px;
+    height: auto;
+    width: auto;
+    display: inline-block;
+    border-radius: 4px 4px 0px 0px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Tab panel */
+.tab-panel {
+    background-color: rgb(57, 57, 57);
+    line-height: 1.6;
+    padding: 24px;
+    margin: 0 auto; /* center horizontally */
+    border-radius: 0px 0px 4px 4px;
+    width: auto;
+    max-width: 1200px; /* constrain width so centering is visible */
+    box-sizing: border-box;
+}
+h2 {
+    color: white;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-top: 0;
+    width: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th{
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: bold;
+    background-color: #0e063d;
+    padding: 8px;
+    border: solid 1px rgb(47, 47, 47);
+    margin: 0;
+}
+td {
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgb(20, 20, 20);
+    padding: 8px;
+    border: solid 1px gray;
+    margin: 0;
+    background-color: #bfbfbf;
+    border-spacing: 0;
+    gap: 0;
+}
+code {
+    background-color: #5f5f5f;
+    color: #ffffff;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+}
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+.nav-item-link[aria-selected="true"] { font-weight: bold; }
