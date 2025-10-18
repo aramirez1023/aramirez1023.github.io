@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML &amp; CSS Cheat Sheet</title>
+    <link rel="stylesheet" href="./Style/style.css">
+</head>
+<body>
+    <header>
+        <h1>HTML &amp;<br>CSS Cheat Sheet</h1>
+    </header>
+    <main>
+        <div class="tab-bar">
+            <button class="btn-current" href="index.html">HTML</button>
+            <button class="btn-clickable" href="./css-cheat-sheet.html">CSS</button>
+        </div>
+        <!---tablist for tabpanels-->
+        <ul class="tab-pills" role="tablist">
+            <li class="nav-item nav-item-active">
+                <a class="nav-item-link" id="tab-general" href="#panel-general" role="tab" aria-controls="panel-general" aria-selected="true">General</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item-link" id="tab-elements" href="#panel-elements" role="tab" aria-controls="panel-elements" aria-selected="false">Elements</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item-link" id="tab-semantics" href="#panel-semantics" role="tab" aria-controls="panel-semantics" aria-selected="false">Semantics</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item-link" id="tab-tables" href="#panel-tables" role="tab" aria-controls="panel-tables" aria-selected="false">Tables</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item-link" id="tab-attricutes" href="#panel-attributes" role="tab" aria-controls="panel-attributes" aria-selected="false">Attributes</a>
+            </li>
+        </ul>
+        <!---first Tab Panel-->
+    <div id="panel-general" class="tab-panel active" role="tabpanel" aria-labelledby="tab-general" aria-hidden="false" tabindex="-1">
+            <h2>HTML General Practices</h2>
+            <table>
+                <tr>
+                    <th class="table-header">Code</th>
+                    <th class="table-header">Name</th>
+                    <th class="table-header">Description</th>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet">&lt;h1&gt;<strong>This is an h1</strong>&lt;/h1&gt;</code></td>
+                    <td class="table-cell">Element Content</td>
+                    <td class="table-cell">Content inside an opening and closing tag.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet">&lt;<strong>/</strong>element&gt;</code></td>
+                    <td class="table-cell">Closing tag</td>
+                    <td class="table-cell">Is used to close an HTML element.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet">&lt;p <strong>id="x" class="y"</strong>&gt;</code></td>
+                    <td class="table-cell">HTML Attribute</td>
+                    <td class="table-cell">Attributes are used to add behaviors or configurations to opening tags.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>&lt;p&gt;</strong>hello!<strong>&lt;/p&gt;</strong></code></td>
+                    <td class="table-cell">HTML Element</td>
+                    <td class="table-cell">Is an HTML tag.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>&lt;div&gt;</strong></code></td>
+                    <td class="table-cell">HTML Tag</td>
+                    <td class="table-cell">A syntax that defines an element in the document.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>--</strong>&lt;p&gt;</code></td>
+                    <td class="table-cell">Indentation</td>
+                    <td class="table-cell">It's the recommended way to write nested HTML elements for ease of use.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>&lt;!--</strong>This is a comment<strong>--&gt;</strong></code></td>
+                    <td class="table-cell">Comment</td>
+                    <td class="table-cell">Adds context to code, does not render as content or change behavior.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>&lt;!DOCTYPE html&gt;</strong></code></td>
+                    <td class="table-cell">Document Type</td>
+                    <td class="table-cell">Declares the document type and prepares the file for HTML.</td>
+                </tr>
+            </table>
+        </div>
+        <!---Second Tab Panel-->
+    <div id="panel-elements" class="tab-panel" role="tabpanel" aria-labelledby="tab-elements" aria-hidden="true" tabindex="-1">
+            <h2>HTML Elements</h2>
+            <table>
+                <tr>
+                    <th class="table-header">Code</th>
+                    <th class="table-header">Name</th>
+                    <th class="table-header">Description</th>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>&lt;li&gt;</strong></code></td>
+                    <td class="table-cell">List Element</td>
+                    <td class="table-cell">Creates an element inside an ordered or unordered list.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>&lt;em&gt;</strong></code></td>
+                    <td class="table-cell">Emphasis Element</td>
+                    <td class="table-cell">Emphazises the enclosed text and renders it in italics.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>&lt;ol&gt;</strong>&lt;li&gt;&lt;/li&gt;<strong>&lt;/ol&gt;</strong></code></td>
+                    <td class="table-cell">Ordered List</td>
+                    <td class="table-cell">Encloses &lt;li&gt; elements to create numbered lists aka ordered lists.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>&lt;div&gt;</strong>Content<strong>&lt;/div&gt;</strong></code></td>
+                    <td class="table-cell">Division Element</td>
+                    <td class="table-cell">It's used as an element that contains information and divides the document into sections.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>&lt;br&gt;</strong></code></td>
+                    <td class="table-cell">Line break</td>
+                    <td class="table-cell">Creates a line break when used within a body of text.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>&lt;h1&gt;&lt;h6&gt;</strong></code></td>
+                    <td class="table-cell">Headings</td>
+                    <td class="table-cell">Adds six levels of hierarchy headings to organize content.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>&lt;p&gt;</strong>This is text<strong>&lt;/p&gt;</strong></code></td>
+                    <td class="table-cell">Paragraph element</td>
+                    <td class="table-cell">Display a box of text.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>&lt;ul&gt;</strong>&lt;li&gt;&lt;/li&gt;<strong>&lt;/ul&gt;</strong></code></td>
+                    <td class="table-cell">Unordered List</td>
+                    <td class="table-cell">Encloses &lt;li&gt; elements to create bulleted lists aka unordered lists.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>&lt;body&gt;</strong>Content<strong>&lt;/body&gt;</strong></code></td>
+                    <td class="table-cell">Unordered List</td>
+                    <td class="table-cell">Renders content in an HTML document, only use one per file.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet">&lt;p&gt;This<strong>&lt;span&gt;</strong>text<strong>&lt;/span&gt;</strong>&lt;/p&gt;</code></td>
+                    <td class="table-cell">Span Element</td>
+                    <td class="table-cell">Used to style inline text, not semantic.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet">&lt;p&gt;This is<strong>&lt;strong&gt;</strong>Bold<strong>&lt;/strong&gt;</strong>&lt;/p&gt;</code></td>
+                    <td class="table-cell">Strong Element</td>
+                    <td class="table-cell">Highlights important text, renders it as bold.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>&lt;a href="..."&gt;</strong>link name<strong>&lt;/a&gt;</strong></code></td>
+                    <td class="table-cell">Anchor Element</td>
+                    <td class="table-cell">Creates clickable links to other elements, files or urls.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>&lt;head&gt;</strong>Metadata stored here<strong>&lt;/head&gt;</strong></code></td>
+                    <td class="table-cell">Head Element</td>
+                    <td class="table-cell">Contains important information for the HTML file. not rendered visually</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>&lt;html&gt;</strong>all html elements<strong>&lt;/html&gt;</strong></code></td>
+                    <td class="table-cell">HTML Element</td>
+                    <td class="table-cell">Contains all the HTML information of a file.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>&lt;title&gt;</strong>Page Title<strong>&lt;/title&gt;</strong></code></td>
+                    <td class="table-cell">Title Element</td>
+                    <td class="table-cell">Contains the page's title, displayed by the browser window or tab.</td>
+                </tr>
+            </table>
+        </div>
+        <!---third Tab Panel-->
+    <div id="panel-semantics" class="tab-panel" role="tabpanel" aria-labelledby="tab-semantics" aria-hidden="true" tabindex="-1">
+            <h2>Semantic Elements</h2>
+            <table>
+                
+                <tr>
+                    <th class="table-header">Code</th>
+                    <th class="table-header">Name</th>
+                    <th class="table-header">Description</th>
+                </tr>
+                  <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>&lt;video</strong> src="...mp4" controls&gt;...</code></td>
+                    <td class="table-cell">Video Element</td>
+                    <td class="table-cell">Embeds a media player for video playback.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>&lt;img</strong> src="...png"&gt;</code></td>
+                    <td class="table-cell">Image Element</td>
+                    <td class="table-cell">Embeds an image with a source attribute, does not need a closing tag.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>&lt;embed src="..."/&gt;</strong></code></td>
+                    <td class="table-cell">Embed element</td>
+                    <td class="table-cell">Used to insert media, not recommended.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>&lt;figure&gt;</strong>&lt;img src="..."&gt;<strong>&lt;/figure&gt;</strong></code></td>
+                    <td class="table-cell">Figure Element</td>
+                    <td class="table-cell">Used to encapsulate semantically image based media.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>&lt;figcaption&gt;</strong>figure description...<strong>&lt;/figcaption&gt;</strong></code></td>
+                    <td class="table-cell">Figcaption Element</td>
+                    <td class="table-cell">Used to semantically describe the image inside a figure element.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>&lt;section&gt;</strong>...!<strong>&lt;/section&gt;</strong></code></td>
+                    <td class="table-cell">Section Element</td>
+                    <td class="table-cell">Defines semantically an area within the file, can be used with article elements.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>&lt;article&gt;</strong>...!<strong>&lt;/article&gt;</strong></code></td>
+                    <td class="table-cell">Article Element</td>
+                    <td class="table-cell">Used to contextualize information of a section.</td>
+                </tr>
+            </table>
+        </div>
+        <!---fourth Tab Panel-->
+    <div id="panel-tables" class="tab-panel" role="tabpanel" aria-labelledby="tab-tables" aria-hidden="true" tabindex="-1">
+            <h2>Table Elements</h2>
+            <table>
+                
+                <tr>
+                    <th class="table-header">Code</th>
+                    <th class="table-header">Name</th>
+                    <th class="table-header">Description</th>
+                </tr>
+                  <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>&lt;tr&gt;</strong>...<strong>&lt;/tr&gt;</strong></code></td>
+                    <td class="table-cell">Table Row Element</td>
+                    <td class="table-cell">Adds a table row to the table, contains data cells.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>&lt;td&gt;</strong>Cell info<strong>&lt;/td&gt;</strong></code></td>
+                    <td class="table-cell">Table Data Element</td>
+                    <td class="table-cell">Nested inside a row, adds a cell with data inside.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>&lt;thead&gt;</strong>...<strong>&lt;/thead&gt;</strong></code></td>
+                    <td class="table-cell">Table Header</td>
+                    <td class="table-cell">Defines Semantically the rows of a table that contains the heading information.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>&lt;tbody&gt;</strong>...<strong>&lt;/tbody&gt;</strong></code></td>
+                    <td class="table-cell">Table Body</td>
+                    <td class="table-cell">Contains the content of the table semantically.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>&lt;th&gt;</strong>Column header<strong>&lt;/th&gt;</strong></code></td>
+                    <td class="table-cell">Table Heading</td>
+                    <td class="table-cell">Contains the content of the table semantically.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet"><strong>&lt;tfoot&gt;</strong>...<strong>&lt;/tfoot&gt;</strong></code></td>
+                    <td class="table-cell">Table Footer</td>
+                    <td class="table-cell">Adds a section within the table defined as the footer, used for summaries. </td>
+                </tr>
+            </table>
+        </div>
+        <!---fifth Tab Panel-->
+    <div id="panel-attributes" class="tab-panel" role="tabpanel" aria-labelledby="tab-attributes" aria-hidden="true" tabindex="-1">
+            <h2>HTML Attributes</h2>
+            <table>
+                
+                <tr>
+                    <th class="table-header">Code</th>
+                    <th class="table-header">Name</th>
+                    <th class="table-header">Description</th>
+                </tr>
+                  <tr>
+                    <td class="table-cell"><code class="code-snippet">&lt;h1 <strong>id="x"</strong>&gt;&lt;/h1&gt;</code></td>
+                    <td class="table-cell">Unique ID Attribute</td>
+                    <td class="table-cell">Adds an unique identifier to an element, has high hierarchy in css.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet">&lt;img <strong>alt="x"</strong>/&gt;</code></td>
+                    <td class="table-cell">Alt Attribute</td>
+                    <td class="table-cell">Adds alternative text, helps accessibility and SEO.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet">&lt;a href=... <strong>target="x"</strong>&gt;...</code></td>
+                    <td class="table-cell">Target Attribute</td>
+                    <td class="table-cell">Specifies where and how anchor hyperlinks should be opened</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet">&lt;a <strong>href="#Hey"</strong>&gt;Hey&lt;/a&gt;</code></td>
+                    <td class="table-cell">Section Links</td>
+                    <td class="table-cell">Ask browser to navigate to correspondig file path.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet">&lt;a <strong>href=".about"</strong>&gt;about&lt;/a&gt;</code></td>
+                    <td class="table-cell">File Path</td>
+                    <td class="table-cell">Contains the content of the table semantically.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet">&lt;th <strong>rowspan="x"</strong>&gt;</code></td>
+                    <td class="table-cell">Rowspan Attribute</td>
+                    <td class="table-cell">Defines how many rows the cell should occupy.</td>
+                </tr>
+                <tr>
+                    <td class="table-cell"><code class="code-snippet">&lt;th <strong>colspan="x"</strong>&gt;</code></td>
+                    <td class="table-cell">Colspan Attribute</td>
+                    <td class="table-cell">Defines how many columns the cell should occupy.</td>
+                </tr>
+            </table>
+        </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
+                    const panels = Array.from(document.querySelectorAll('[role="tabpanel"]'));
+
+                    function showPanel(panel) {
+                        panels.forEach(p => {
+                            p.classList.remove('active');
+                            p.setAttribute('aria-hidden', 'true');
+                            p.setAttribute('tabindex', '-1');
+                        });
+                        if (!panel) return;
+                        panel.classList.add('active');
+                        panel.setAttribute('aria-hidden', 'false');
+                        panel.removeAttribute('tabindex');
+                    }
+
+                    function activateTab(tab) {
+                        if (!tab) return;
+                        // deactivate all tabs
+                        tabs.forEach(t => t.setAttribute('aria-selected', 'false'));
+                        // remove visual active class from nav items
+                        document.querySelectorAll('.tab-pills .nav-item-active').forEach(li => li.classList.remove('nav-item-active'));
+
+                        // activate chosen tab
+                        tab.setAttribute('aria-selected', 'true');
+                        const parentLi = tab.closest('li');
+                        if (parentLi) parentLi.classList.add('nav-item-active');
+
+                        // show related panel
+                        const panelId = tab.getAttribute('aria-controls');
+                        const target = document.getElementById(panelId);
+                        showPanel(target);
+
+                        // update URL hash for deep-linking without adding history entries
+                        const href = tab.getAttribute('href');
+                        if (href && href.startsWith('#')) history.replaceState(null, '', href);
+                    }
+
+                    // click & keyboard
+                    tabs.forEach((tab, index) => {
+                        tab.addEventListener('click', e => {
+                            e.preventDefault();
+                            activateTab(tab);
+                            // move focus to panel for keyboard users
+                            const panel = document.getElementById(tab.getAttribute('aria-controls'));
+                            if (panel) panel.focus();
+                        });
+
+                        tab.addEventListener('keydown', e => {
+                            const { key } = e;
+                            if (key === 'ArrowRight') { e.preventDefault(); tabs[(index + 1) % tabs.length].focus(); }
+                            if (key === 'ArrowLeft') { e.preventDefault(); tabs[(index - 1 + tabs.length) % tabs.length].focus(); }
+                            if (key === 'Home') { e.preventDefault(); tabs[0].focus(); }
+                            if (key === 'End') { e.preventDefault(); tabs[tabs.length - 1].focus(); }
+                            if (key === 'Enter' || key === ' ') { e.preventDefault(); activateTab(document.activeElement); }
+                        });
+                    });
+
+                    // respond to hash changes (deep links / back button)
+                    window.addEventListener('hashchange', () => {
+                        const hash = location.hash;
+                        const tab = tabs.find(t => t.getAttribute('href') === hash || ('#' + t.getAttribute('aria-controls')) === hash);
+                        if (tab) activateTab(tab);
+                    });
+
+                    // initial activation preference: hash > aria-selected=true > nav-item-active in markup > first tab
+                    const hashTab = tabs.find(t => t.getAttribute('href') === location.hash || ('#' + t.getAttribute('aria-controls')) === location.hash);
+                    const ariaTab = tabs.find(t => t.getAttribute('aria-selected') === 'true');
+                    const navActive = document.querySelector('.tab-pills .nav-item-active a[role="tab"]');
+                    const start = hashTab || ariaTab || navActive || tabs[0];
+                    if (start) activateTab(start);
+                });
+            </script>
+    </main>
+</body>
+</html>
